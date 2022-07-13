@@ -2,25 +2,49 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/styles.css">
-  <script defer src="./js/main.js"></script>
-  <title>Todo List Project</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script defer src="./js/main.js"></script>
+    <title>Todo List Project</title>
 </head>
 
 <body>
-  <h1>Todos</h1>
-  <form>
-    <input type="text">
-    <ul id="form">
-      checkbox, and 2 buttons
-      <li>Todo 1</li>
-      <li>Todo 2</li>
-      <li>Todo 3</li>
+    <h1>Todo List</h1>
+    <hr>
+    <form class="newItem">
+        <input type="text" name="addNew" value="yourNewItem">
+        <input type="submit" value="add item">
+    </form>
+    <hr>
+
+    <ul class="list">
+        <li class="listItem" id="1">
+            <!--  the li id is unique and is incremented each time a new item is added   -->
+            <span class="itemText">walk the dog</span>
+            <span class="delete">
+              <form>
+                <label name="deleteButton">delete</label>
+                <input type="button" name="deleteButton">
+              </form>
+            </span>
+            <span class="edit">
+              <form>
+                <label name="editButton">edit</label>
+                <input type="checkBox" name="editButton">
+              </form>
+            </span>
+            <span class="isDone">
+              <form>
+                <label name="doneButton">cross Off</label>
+                <input type="checkbox" name="doneButton">
+              </form>
+            </span>
+            <hr>
+
+        </li>
     </ul>
-  </form>
 </body>
 
 </html>
