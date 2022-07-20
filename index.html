@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <script defer src="./js/main.js"></script>
+    <script src="./js/main.js" defer></script>
     <title>Todo List Project</title>
 </head>
 
@@ -14,32 +14,24 @@
     <h1>Todo List</h1>
     <hr>
     <form class="newItem">
-        <input type="text" name="addNew" value="yourNewItem">
+        <input id="newItemBox" type="text" name="addNew">
         <input type="submit" value="add item">
     </form>
     <hr>
 
-    <ul class="list">
-        <li class="listItem" id="1">
+    <ul class="list" id="myList">
+        <li class="listItem" id="id1">
             <!--  the li id is unique and is incremented each time a new item is added   -->
             <span class="itemText">walk the dog</span>
             <span class="delete">
-              <form>
-                <label name="deleteButton">delete</label>
-                <input type="button" name="deleteButton">
-              </form>
+                <button id="deleteButton">
             </span>
             <span class="edit">
-              <form>
-                <label name="editButton">edit</label>
-                <input type="checkBox" name="editButton">
-              </form>
+                <input type="checkBox" id="editButton">
             </span>
             <span class="isDone">
-              <form>
                 <label name="doneButton">cross Off</label>
-                <input type="checkbox" name="doneButton">
-              </form>
+                <button id = "doneButton" type="checkbox" name="doneButton">
             </span>
             <hr>
 
