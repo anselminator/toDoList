@@ -2,49 +2,50 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <script defer src="./js/main.js"></script>
-    <title>Todo List Project</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
+  <title>Todo App Project</title>
 </head>
 
 <body>
-    <h1>Todo List</h1>
-    <hr>
-    <form class="newItem">
-        <input type="text" name="addNew" value="yourNewItem">
-        <input type="submit" value="add item">
+
+  <div class="container">
+    <!-- dark theme toggle -->
+    <div class="toggle">
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+        <em>Enable Dark Mode!</em>
+      </div>
+    </div>
+
+    <!-- Todo form html -->
+    <h1>Todo's</h1>
+    <form id="form">
+      <input type="text" id="todocontent" name="todocontent" placeholder="Add todo">
+      <p class="alert" id="alert"></p>
     </form>
-    <hr>
+    <ul id="todo-list" class="">
 
-    <ul class="list">
-        <li class="listItem" id="1">
-            <!--  the li id is unique and is incremented each time a new item is added   -->
-            <span class="itemText">walk the dog</span>
-            <span class="delete">
-              <form>
-                <label name="deleteButton">delete</label>
-                <input type="button" name="deleteButton">
-              </form>
-            </span>
-            <span class="edit">
-              <form>
-                <label name="editButton">edit</label>
-                <input type="checkBox" name="editButton">
-              </form>
-            </span>
-            <span class="isDone">
-              <form>
-                <label name="doneButton">cross Off</label>
-                <input type="checkbox" name="doneButton">
-              </form>
-            </span>
-            <hr>
+      <!-- Example list item -->
+      <li class="list-item ">
+        <input type="checkbox" value="Todo Example" class="check">
+        <input type="text" class="content" readonly>
+        <button class="edit btn-bg-edit">Edit</button>
+        <button class="delete btn-bg-delete">Delete</button>
+      </li>
 
-        </li>
     </ul>
+  </div>
+
 </body>
 
 </html>
