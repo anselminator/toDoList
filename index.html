@@ -14,25 +14,28 @@
     <h1>Todo List</h1>
     <hr>
     <form class="newItem">
-        <input type="text" name="addNew" value="yourNewItem">
-        <input type="submit" value="add item">
+        <input id ="input" type="text" name="addNew" >
+        <button id="addButton" type="button" >add item</button>
+        <button id="deleteButton" type="button" >delete all items</button>
+        <button id="markAllItems" type="button" >mark all items</button>
+
     </form>
     <hr>
 
-    <ul class="list">
+    <ul id ="list-wrapper" class="list">
         <li class="listItem" id="1">
             <!--  the li id is unique and is incremented each time a new item is added   -->
             <span class="itemText">walk the dog</span>
             <span class="delete">
               <form>
                 <label name="deleteButton">delete</label>
-                <input type="button" name="deleteButton">
+                <input class="deleteCheckbox" type="checkbox" name="deleteButton">
               </form>
             </span>
             <span class="edit">
               <form>
                 <label name="editButton">edit</label>
-                <input type="checkBox" name="editButton">
+                <input type="checkbox" name="editButton">
               </form>
             </span>
             <span class="isDone">
