@@ -1,5 +1,19 @@
-/* Anselm */
+html {
+    background-color: darkslategray;
+}
 
-/* Robert */
+.list {
+    color: violet;
+}
 
-/* Daiden */
+.modify {
+    float: right;
+}
+
+.crossOut {
+    float: right;
+}
+
+.delete {
+    float: right;
+}
