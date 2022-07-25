@@ -60,8 +60,9 @@ class ToDoList {
                 if (!item.modifying) {
                     liTemplate += `<span class=\"itemText\" style=${item.done?"text-decoration:line-through;":" "}>${item.text}</span>` + nl;
                 } else {
+
                     liTemplate += `<span class=\"itemText\"} >` + nl;
-                    liTemplate += `<input type=\"text\" name=\"${item.id}\" style=${item.done?"text-decoration:line-through;":"color:black"} value=\"${item.text}\">` + nl;
+                    liTemplate += `<input type=\"text\" name=\"newText${item.id}\" style=${item.done?"text-decoration:line-through;":"color:black"} value=\"${item.text}\">` + nl;
                     liTemplate += "</span>" + nl;
                 }
                 liTemplate += "<span class=\"modify\">" + nl;
@@ -77,12 +78,13 @@ class ToDoList {
                 liTemplate += "<hr>" + nl;
                 // fill new items inner HTML with the complete content
                 ni.innerHTML = liTemplate;
+                //attach eventlisteners to all the buttons
                 const newmodifyBut = ni.querySelector(".modify [type = button]");
                 newmodifyBut.addEventListener('click', (e) => {
                     if (item.modifying) {
-                        console.log("why am i not doing this?");
-                        // couldn't find the content of the edit form :(((((
-                        this.modifyItem(item.id, "new text");
+                        const search = "newText" + item.id;
+                        const newText = document.getElementsByName(search);
+                        this.modifyItem(item.id, newText[0].value);
                     }
                     this.toggleModify(item.id);
                     this.redraw();
@@ -102,10 +104,6 @@ class ToDoList {
             } // for loop
         } // redraw()
 } // class ToDoList
-
-function onsubmit() {
-    console.log("does it work now?")
-}
 
 //on page load: setup and run 
 const savedList = JSON.parse(localStorage.getItem('toDoList')) || [];
